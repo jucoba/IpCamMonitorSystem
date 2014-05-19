@@ -20,9 +20,9 @@ UsefulLinks
 Installation
 --------------
 Install SimpleCV: See above link for more details
-'''
+```	
 	sudo apt-get install ipython python-opencv python-scipy python-numpy python-setuptools python-pip
 	sudo pip install https://github.com/sightmachine/SimpleCV/zipball/master
 	sudo pip install svgwrite (if you the error: missing dependency svgwrite)
-'''
+```
 	
