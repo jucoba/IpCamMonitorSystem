@@ -7,10 +7,15 @@ A headles python program to monitor the activity of the ip cammera. Draft versio
 UsefulLinks
 -------------
 **Foscam API:** http://www.foscam.es/descarga/ipcam_cgi_sdk.pdf
+
 **How to pull H264 video from IP camera (Doesn't work with FI8905W because is not a H264):** http://blog.mikemccandless.com/2013/11/pulling-h264-video-from-ip-camera-using.html
+
 **SimpleCV Installation:** https://simplecv.readthedocs.org/en/latest/HOWTO-Install%20on%20RaspberryPi.html?highlight=opencv
+
 **SimpleCV on Rasbberry:** Installation on my raspberry failed so I had to use this workaround: http://www.raspberrypi.org/forums/viewtopic.php?t=56103&p=460672
+
 **SimpleCV Cookbook:** https://simplecv.readthedocs.org/en/1.1/cookbook/# 
+
 
 Installation
 --------------
