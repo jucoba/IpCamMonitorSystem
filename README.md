@@ -17,6 +17,7 @@ UsefulLinks
 
 **SimpleCV Cookbook:** https://simplecv.readthedocs.org/en/1.1/cookbook/# 
 
+**avconv:** http://www.recantha.co.uk/blog/?p=4106
 
 Installation
 --------------
@@ -25,5 +26,6 @@ Install SimpleCV: See above link for more details
 	sudo apt-get install ipython python-opencv python-scipy python-numpy python-setuptools python-pip
 	sudo pip install https://github.com/sightmachine/SimpleCV/zipball/master
 	sudo pip install svgwrite (if you the error: missing dependency svgwrite)
+	apt-get install libav-tools
 ```
 	
