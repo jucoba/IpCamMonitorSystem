@@ -33,3 +33,9 @@ Install nose: https://pypi.python.org/pypi/nose/
 ```
 	sudo apt-get install python-nose
 ```
+
+Run test
+--------------
+```
+	nosetests
+```
