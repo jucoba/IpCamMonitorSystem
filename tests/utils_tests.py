@@ -11,7 +11,7 @@ class CamTest(unittest.TestCase):
 		paramUtil = ParamUtils()
 		params = paramUtil.parse(get_status_result)
 		alarm_status = params["alarm_status"]
-		self.assertEqual('0',alarm_status)
+		self.assertEqual("0",alarm_status)
 
 	def test_parse_result_get_alarm_alias(self):
                 f = open("tests/resources/get_status.cgi","r")
@@ -20,7 +20,7 @@ class CamTest(unittest.TestCase):
                 paramUtil = ParamUtils()
                 params = paramUtil.parse(get_status_result)
                 alias = params["alias"]
-                self.assertEqual("'camara1'",alias)
+                self.assertEqual("camara1",alias)
 
 
 if __name__ == '__main__':

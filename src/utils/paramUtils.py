@@ -9,6 +9,6 @@ class ParamUtils:
         	for entry in striped:
                 	if "=" in entry:
                         	key, val = entry.split('=')
-                        	dic[key] = val
+                        	dic[key] = val.translate(None,"'")
 
 		return dic
