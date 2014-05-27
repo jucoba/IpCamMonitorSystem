@@ -1,6 +1,6 @@
 import unittest
 from nose.tools import *
-from paramUtils import *
+from utils.paramUtils import *
 
 class CamTest(unittest.TestCase):
 
