@@ -39,3 +39,9 @@ Run test
 ```
 	nosetests
 ```
+
+Run test with junit format
+--------------
+```
+	nosetests --with-xunit
+```
