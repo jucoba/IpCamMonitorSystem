@@ -26,6 +26,10 @@ Install SimpleCV: See above link for more details
 	sudo apt-get install ipython python-opencv python-scipy python-numpy python-setuptools python-pip
 	sudo pip install https://github.com/sightmachine/SimpleCV/zipball/master
 	sudo pip install svgwrite (if you the error: missing dependency svgwrite)
-	apt-get install libav-tools
+	apt-get install libav-tools	
 ```
 	
+Install nose: https://pypi.python.org/pypi/nose/
+```
+	sudo apt-get install python-nose
+```
