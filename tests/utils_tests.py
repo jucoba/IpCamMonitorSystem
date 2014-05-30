@@ -1,43 +1,34 @@
 import unittest
+import utilsT
 from nose.tools import *
 from utils.paramUtils import *
 
-class CamTest(unittest.TestCase):
+class UtilTest(unittest.TestCase):
+
+	paramUtil = ParamUtils()
+	params = None
+
+	def setUp(self):
+		get_status_result =  utilsT.get_status("tests/resources/get_status.cgi")		
+		self.params = self.paramUtil.parse(get_status_result)
 
 	def test_parse_result_get_alarm_status(self):
-		f = open("tests/resources/get_status.cgi","r")
-		get_status_result =  f.read()
-		f.close()
-		paramUtil = ParamUtils()
-		params = paramUtil.parse(get_status_result)
-		alarm_status = params["alarm_status"]
+		alarm_status = self.params["alarm_status"]
 		self.assertEqual("0",alarm_status)
 
 	def test_parse_result_get_alarm_alias(self):
-		f = open("tests/resources/get_status.cgi","r")
-		get_status_result =  f.read()
-		f.close()
-		paramUtil = ParamUtils()
-		params = paramUtil.parse(get_status_result)
-		alias = params["alias"]
+		
+		alias = self.params["alias"]
 		self.assertEqual("camara1",alias)
 
 	def test_parse_result_get_alarm_sys_ver(self):
-		f = open("tests/resources/get_status.cgi","r")
-		get_status_result =  f.read()
-		f.close()
-		paramUtil = ParamUtils()
-		params = paramUtil.parse(get_status_result)
-		alias = params["sys_ver"]
+		
+		alias = self.params["sys_ver"]
 		self.assertEqual("11.35.2.51",alias)
 
 	def test_parse_result_get_alarm_sys_now(self):
-		f = open("tests/resources/get_status.cgi","r")
-		get_status_result =  f.read()
-		f.close()
-		paramUtil = ParamUtils()
-		params = paramUtil.parse(get_status_result)
-		alias = params["now"]
+		
+		alias = self.params["now"]
 		self.assertEqual("1398625121",alias)		
 
 
