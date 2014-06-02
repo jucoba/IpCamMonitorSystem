@@ -2,7 +2,7 @@ import unittest
 import utilsT
 from nose.tools import *
 from utils.paramUtils import *
-from mock import Mock
+
 
 class UtilTest(unittest.TestCase):
 
@@ -15,7 +15,7 @@ class UtilTest(unittest.TestCase):
 
 	def test_parse_result_get_alarm_status(self):
 		alarm_status = self.params["alarm_status"]
-		self.assertEqual("0",alarm_status)
+		self.assertEqual("1",alarm_status)
 
 	def test_parse_result_get_alarm_alias(self):
 		
