@@ -33,6 +33,11 @@ Install nose: https://pypi.python.org/pypi/nose/
 ```
 	sudo apt-get install python-nose
 ```
+Install Mock: https://pypi.python.org/pypi/mock#downloads
+```
+	cd [extracted mock path]
+	sudo python setup.py install
+```
 
 Run test
 --------------

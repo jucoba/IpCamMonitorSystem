@@ -13,6 +13,7 @@ class CameraTest(unittest.TestCase):
 		self.params = self.paramUtil.parse(get_status_result)
 
 	def test_motion_alert_activated(self):
-		cam = Camera()
+		url = "192.168.1.105:80"		
+		cam = Camera(url)
 		self.assertTrue(cam.motion_detected())
 		

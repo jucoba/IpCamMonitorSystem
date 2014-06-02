@@ -2,6 +2,7 @@ import unittest
 import utilsT
 from nose.tools import *
 from utils.paramUtils import *
+from mock import Mock
 
 class UtilTest(unittest.TestCase):
 
