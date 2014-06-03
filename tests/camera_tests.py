@@ -20,10 +20,15 @@ class CameraTest(unittest.TestCase):
 		self.assertTrue(cam.motion_detected())
 
 	def test_motion_alert_not_activated(self):
-		url = "192.168.1.105:80"		
+		url = "192.168.1.101"	
 		cam = Camera(url)
 		newParams = self.params
 		newParams["alarm_status"] = "0"
 		cam.get_status = Mock(return_value=self.params)
+		self.assertFalse(cam.motion_detected())
+
+	def system_test_get_cam_alert_not_activated(self):
+		url = "192.168.1.101"	
+		cam = Camera(url)		
 		self.assertFalse(cam.motion_detected())
 		

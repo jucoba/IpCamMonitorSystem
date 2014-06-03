@@ -1,4 +1,3 @@
-var id='00626E4E03B7';
 var sys_ver='11.35.2.51';
 var app_ver='2.4.20.6';
 var alias='camara1';
@@ -16,3 +15,4 @@ var wifi_status=1;
 var temperature=0.0;
 var humidity=0;
 var tridro_error='';
+var id='00626E4E03B7';
