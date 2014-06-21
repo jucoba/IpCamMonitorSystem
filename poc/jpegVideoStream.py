@@ -23,12 +23,17 @@ class VideoRec:
 			self.makeSaveImg = Process(target=self.saveImgToDisk, args=(img,imgName))
 			self.makeSaveImg.start()
 			#self.saveImgToDisk(img,imgName)
-			#vs.writeFrame(img)
+			vs.writeFrame(img)
 			print i
 			print "----------"
 
-		self.makefilmProcess = Process(target=self.saveFilmToDisk, args=("MyVideo2.avi", "MyoutputFile.mpeg"))
-		self.makefilmProcess.start()
+		#self.makefilmProcess = Process(target=self.saveFilmToDisk, args=("MyVideo2.avi", "MyoutputFile.mpeg"))
+		#self.makefilmProcess.start()
+
+		params = " -i {0} -c:v mpeg4 -b:v 700k -r 24 {1}".format("MyVideo2.avi", "MyoutputFile.avi")
+	 
+	    # run avconv to compress the video since ffmpeg is deprecated (going to be).
+		call('avconv'+params, shell=True)
 
 	def saveImgToDisk(self,img, filename):
 		img.save(filename)
