@@ -4,27 +4,24 @@ import json
 
 class ConfigUtils:
 
+	json_data = None
+
 	def getConfigFiles(self):		
 		return glob.glob("config/*.config")
 
-		
-	def getUrl(self, camera_name):
-		file = self.getConfigFiles()[0]
-		print file
+	def loadJsonData(self):
+		file = self.getConfigFiles()[0]		
 		configFile = open(file)
-		json_config = json.loads(configFile.read())
-		return json_config["url"]
+		self.json_data = json.loads(configFile.read())
+		
+	def getUrl(self, camera_name):		
+		self.loadJsonData()
+		return self.json_data["url"]
 
 	def getUser(self, camera_name):
-		file = self.getConfigFiles()[0]
-		print file
-		configFile = open(file)
-		json_config = json.loads(configFile.read())
-		return json_config["user"]
+		self.loadJsonData()
+		return self.json_data["user"]
 
 	def getPwd(self, camera_name):
-		file = self.getConfigFiles()[0]
-		print file
-		configFile = open(file)
-		json_config = json.loads(configFile.read())
-		return json_config["password"]		
+		self.loadJsonData()
+		return self.json_data["password"]		
