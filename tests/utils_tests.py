@@ -38,6 +38,10 @@ class UtilTest(unittest.TestCase):
 		files = self.configUtil.getConfigFiles()			
 		self.assertTrue("config/cam1.config" in files)
 
+	def test_get_url_cam1(self):
+		url = self.configUtil.getUrl("cam1")
+		self.assertEqual("192.168.1.101:8080",url)
+
 
 if __name__ == '__main__':
     unittest.main()
