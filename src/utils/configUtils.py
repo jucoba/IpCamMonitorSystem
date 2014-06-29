@@ -1,8 +1,8 @@
-import os
+import glob
 import inspect
 
 class ConfigUtils:
 
 	def getConfigFiles(self):
-		return os.listdir("./config")		
-		#return ["cam2.config"]
+		print glob.glob("config/*.config")
+		return glob.glob("config/*.config")

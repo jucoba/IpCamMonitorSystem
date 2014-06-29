@@ -36,7 +36,7 @@ class UtilTest(unittest.TestCase):
 
 	def test_read_config_files_shouldFindFile_cam1Config(self):
 		files = self.configUtil.getConfigFiles()			
-		self.assertTrue("cam1.config" in files)
+		self.assertTrue("config/cam1.config" in files)
 
 
 if __name__ == '__main__':
