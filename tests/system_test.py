@@ -11,6 +11,7 @@ class CameraSystem(unittest.TestCase):
 
 	
 
+	@unittest.skip("skipping system tests")
 	def system_test_get_cam_alert_not_activated(self):
 		url = "192.168.1.101"	
 		cam = Camera(url)		

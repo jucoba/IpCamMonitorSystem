@@ -23,6 +23,5 @@ class ParamUtils:
 				if (val.__class__.__name__ == "str"):
 					dic_Params[key] = val.translate(None,"'")
 				else:
-					dic_Params[key] = val		
-		print dic_Params			
+					dic_Params[key] = val							
 		return dic_Params

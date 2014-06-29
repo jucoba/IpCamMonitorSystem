@@ -1,4 +1,4 @@
-from SimpleCV import JpegStreamCamera, VideoStream# Import the parts we need from SimpleCV
+from SimpleCV import JpegStreamCamera, VideoStream# Import the parts we need from 	SimpleCV
 from subprocess import call 
 # This import is just to create the video (if you want to do something meanwhile)
 from multiprocessing import Process

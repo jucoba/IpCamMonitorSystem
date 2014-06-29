@@ -2,11 +2,13 @@ import unittest
 import utilsT
 from nose.tools import *
 from utils.paramUtils import *
+from utils.configUtils import *
 
 
 class UtilTest(unittest.TestCase):
 
 	paramUtil = ParamUtils()
+	configUtil = ConfigUtils()
 	params = None
 
 	def setUp(self):
@@ -30,7 +32,11 @@ class UtilTest(unittest.TestCase):
 	def test_parse_result_get_alarm_sys_now(self):
 		
 		alias = self.params["now"]
-		self.assertEqual("1398625121",alias)		
+		self.assertEqual("1398625121",alias)
+
+	def test_read_config_files_shouldFindFile_cam1Config(self):
+		files = self.configUtil.getConfigFiles()			
+		self.assertTrue("cam1.config" in files)
 
 
 if __name__ == '__main__':
