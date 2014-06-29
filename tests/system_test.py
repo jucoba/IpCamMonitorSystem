@@ -16,6 +16,7 @@ class CameraSystem(unittest.TestCase):
 		cam = Camera(url)		
 		self.assertFalse(cam.motion_detected())
 
+	#@unittest.skip("skipping system tests")
 	def system_test_get_cam_alert_not_activated(self):
 		url = self.configUtil.getUrl("cam1")
 		cam = Camera(url)		
