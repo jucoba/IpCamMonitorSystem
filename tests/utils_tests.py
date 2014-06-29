@@ -42,6 +42,14 @@ class UtilTest(unittest.TestCase):
 		url = self.configUtil.getUrl("cam1")
 		self.assertEqual("192.168.1.101:8080",url)
 
+	def test_get_user_cam1(self):
+		user = self.configUtil.getUser("cam1")
+		self.assertEqual("pi",user)
+
+	def test_get_pwd_cam1(self):
+		pwd = self.configUtil.getPwd("cam1")
+		self.assertEqual("pi",pwd)
+
 
 if __name__ == '__main__':
     unittest.main()

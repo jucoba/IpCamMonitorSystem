@@ -14,4 +14,17 @@ class ConfigUtils:
 		configFile = open(file)
 		json_config = json.loads(configFile.read())
 		return json_config["url"]
-		#return "192.168.1.101:8080"
+
+	def getUser(self, camera_name):
+		file = self.getConfigFiles()[0]
+		print file
+		configFile = open(file)
+		json_config = json.loads(configFile.read())
+		return json_config["user"]
+
+	def getPwd(self, camera_name):
+		file = self.getConfigFiles()[0]
+		print file
+		configFile = open(file)
+		json_config = json.loads(configFile.read())
+		return json_config["password"]		
