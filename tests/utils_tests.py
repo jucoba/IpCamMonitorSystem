@@ -3,12 +3,13 @@ import utilsT
 from nose.tools import *
 from utils.paramUtils import *
 from utils.configUtils import *
-
+from camera.cameraManager import *
 
 class UtilTest(unittest.TestCase):
 
 	paramUtil = ParamUtils()
 	configUtil = ConfigUtils()
+	cameraManager = CameraManager()
 	params = None
 
 	def setUp(self):
@@ -49,6 +50,10 @@ class UtilTest(unittest.TestCase):
 	def test_get_pwd_cam1(self):
 		pwd = self.configUtil.getPwd("cam1")
 		self.assertEqual("pi",pwd)
+
+	def test_get_url_cam1_from_ip(self):
+		camera = self.cameraManager.getCam("192.168.1.101")
+		self.assertEqual("192.168.1.101:8080",camera.getUrl())
 
 
 if __name__ == '__main__':
