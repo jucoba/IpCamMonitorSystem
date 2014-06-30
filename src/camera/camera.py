@@ -9,7 +9,7 @@ class Camera():
 
 	def __init__(self, json_data):
 		self.json_data = json_data				
-		self.url = self.configUtil.getUrl2(json_data)
+		self.url = self.configUtil.getUrl(json_data)
 
 	def motion_detected(self):
 		params = self.get_status()		

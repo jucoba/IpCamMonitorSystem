@@ -18,12 +18,12 @@ class ConfigUtils:
 		configFile = open(file)		
 		return json.loads(configFile.read())
 		
-	def getUrl2(self, json_data):
+	def getUrl(self, json_data):
 		return json_data["url"] 
 
-	def getUrl(self, camera_name):		
-		self.loadJsonData()
-		return self.json_data["url"]
+	#def getUrl(self, camera_name):		
+	#	self.loadJsonData()
+	#	return self.json_data["url"]
 
 	def getUser(self, camera_name):
 		self.loadJsonData()
