@@ -4,7 +4,7 @@ import urllib2
 class ParamUtils:
 
 	def get_status(self, url, user, pwd):
-		request_url =  "http://%s/get_status.cgi?user=%s&pwd=%s"%(url, user, pwd)
+		request_url =  "http://%s/get_status.cgi?user=%s&pwd=%s"%(url, user, pwd)		
 		data = urllib2.urlopen(request_url).read()
 		stData = data.decode()
 		dic = self.parse(stData)

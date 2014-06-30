@@ -39,10 +39,10 @@ class UtilTest(unittest.TestCase):
 		files = self.configUtil.getConfigFiles()			
 		self.assertTrue("config/cam1.config" in files)
 
-	@unittest.skip("Need to fix this, the getURL method changed")
-	def test_get_url_cam1(self):
-		url = self.configUtil.getUrl("cam1")
-		self.assertEqual("192.168.1.101:8080",url)
+	def test_read_config_files_shouldFindFile_cam2Config(self):
+		files = self.configUtil.getConfigFiles()			
+		self.assertTrue("config/cam2.config" in files)
+
 
 	def test_get_user_cam1(self):
 		user = self.configUtil.getUser("cam1")
@@ -55,6 +55,28 @@ class UtilTest(unittest.TestCase):
 	def test_get_url_cam1_from_ip(self):
 		camera = self.cameraManager.getCam("192.168.1.101")
 		self.assertEqual("192.168.1.101:8080",camera.getUrl())
+
+	def test_config_dictionary_cam1(self):
+		data = self.configUtil.getCamConfigList()
+		self.assertTrue("192.168.1.101" in data, "La camara 192.168.1.101 no se encontro")
+
+	def test_config_dictionary_cam2(self):
+		data = self.configUtil.getCamConfigList()
+		self.assertTrue("192.168.1.102" in data, "La configuracion de la camara 192.168.1.102 no se encontro")
+
+	def test_manger_get_cam2(self):
+		camList = self.cameraManager.loadcameras()
+		self.assertTrue("192.168.1.102" in camList, "La camara 192.168.1.102 no se encontro en el manager")
+
+	def test_manger_get_cam1(self):
+		camList = self.cameraManager.loadcameras()
+		self.assertTrue("192.168.1.101" in camList, "La camara 192.168.1.101 no se encontro en el manager")
+
+	def test_manger_get_cam2_should_not_be_found(self):
+		camList = self.cameraManager.loadcameras()
+		self.assertTrue("192.168.1.103" not in camList, "La camara 192.168.1.103  se encontro en el manager y no deberia")
+
+
 
 
 if __name__ == '__main__':
