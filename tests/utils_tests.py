@@ -76,6 +76,10 @@ class UtilTest(unittest.TestCase):
 		camList = self.cameraManager.loadcameras()
 		self.assertTrue("192.168.1.103" not in camList, "La camara 192.168.1.103  se encontro en el manager y no deberia")
 
+	def test_manger_get_url_cam1(self):
+		camera1 = self.cameraManager.getCam("192.168.1.101")
+		self.assertEqual(camera1.getUrl(), "192.168.1.101:8080")
+
 
 
 
