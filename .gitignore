@@ -2,3 +2,4 @@ __pycache__
 *.pyc
 nosetests.xml
 camera.py.html
+*.log
