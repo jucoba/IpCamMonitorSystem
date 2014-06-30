@@ -50,3 +50,18 @@ Run test with junit format
 ```
 	nosetests --with-xunit
 ```
+
+Web Server
+-----------
+A Web server is provided wich tirgers an alarm sound when motion is detected
+
+to use
+```
+	Activate the http motion alarm
+	1. Log as admin to the camera web interface
+	2. In the same browser request  http://[your_cam_ip:port]/set_alarm.cgi?motion_armed=1&http=1&http_url=http://[your_server_ip:port]	
+
+	run
+	python src/webServer.py
+```
+
